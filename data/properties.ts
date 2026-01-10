@@ -3,6 +3,8 @@ export const properties = [
     slug: "jibhi-sunshine-cafe",
     name: "Jibhi Sunshine cafe",
     location: "Jibhi",
+    roomCapacity: 2,
+
     image: "/images/properties/jibhi.webp",
 
     amenities: [
@@ -48,6 +50,8 @@ export const properties = [
     slug: "nagar-mountain-loft-xl",
     name: "Nagar Mountain Loft XL",
     location: "Tirthan",
+    roomCapacity: 2,
+
     image: "/images/properties/nagar.avif",
 
     amenities: [
