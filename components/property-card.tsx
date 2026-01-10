@@ -1,31 +1,31 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-/**
- * PropertyCard
- * Used on:
- * - Homepage
- * - Locations page
- *
- * Purpose:
- * - Quick discovery
- * - Trust building
- * - SEO-friendly internal linking
- */
 export default function PropertyCard({ property }: { property: any }) {
-  /**
-   * PRICE NORMALIZATION
-   * We show ONLY a starting price here.
-   * Detailed pricing stays inside booking flow.
-   *
-   * This avoids:
-   * - Different prices on different pages
-   * - User confusion
-   */
+  const images = [
+    property.images.cover,
+    ...(property.images.gallery ?? []),
+  ];
+
+  const [index, setIndex] = useState(0);
+
   const startingPrice =
     property.pricing?.[0]?.pricePerDay ?? null;
+
+  function prev(e: React.MouseEvent) {
+    e.preventDefault();
+    e.stopPropagation();
+    setIndex(i => (i === 0 ? images.length - 1 : i - 1));
+  }
+
+  function next(e: React.MouseEvent) {
+    e.preventDefault();
+    e.stopPropagation();
+    setIndex(i => (i === images.length - 1 ? 0 : i + 1));
+  }
 
   return (
     <Link
@@ -39,22 +39,67 @@ export default function PropertyCard({ property }: { property: any }) {
         focus:outline-none focus:ring-2 focus:ring-slate-900
       "
     >
-      {/* IMAGE */}
+      {/* ================= IMAGE CAROUSEL ================= */}
       <div className="relative h-52 w-full overflow-hidden">
         <Image
-          src={property.image}
-          alt={`${property.name} in ${property.location}`}
+          src={images[index]}
+          alt={`${property.name} image ${index + 1}`}
           fill
-          priority={false}
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover transition-all duration-500"
+          sizes="(max-width: 768px) 100vw, 33vw"
         />
 
-        {/* IMAGE OVERLAY (SEO safe, UX polish) */}
+        {/* GRADIENT */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+
+        {/* ARROWS (desktop hover) */}
+        {images.length > 1 && (
+          <>
+            <button
+              onClick={prev}
+              aria-label="Previous image"
+              className="
+                absolute left-2 top-1/2 -translate-y-1/2
+                hidden group-hover:flex
+                h-8 w-8 items-center justify-center
+                rounded-full bg-white/90 text-black
+                shadow hover:scale-105 transition
+              "
+            >
+              ‹
+            </button>
+
+            <button
+              onClick={next}
+              aria-label="Next image"
+              className="
+                absolute right-2 top-1/2 -translate-y-1/2
+                hidden group-hover:flex
+                h-8 w-8 items-center justify-center
+                rounded-full bg-white/90 text-black
+                shadow hover:scale-105 transition
+              "
+            >
+              ›
+            </button>
+          </>
+        )}
+
+        {/* DOTS */}
+        {images.length > 1 && (
+          <div className="absolute bottom-2 inset-x-0 flex justify-center gap-1">
+            {images.map((_, i) => (
+              <span
+                key={i}
+                className={`h-1.5 w-1.5 rounded-full transition
+                  ${i === index ? "bg-white" : "bg-white/50"}`}
+              />
+            ))}
+          </div>
+        )}
       </div>
 
-      {/* CONTENT */}
+      {/* ================= CONTENT ================= */}
       <div className="p-5">
         {/* TITLE */}
         <h3 className="text-lg font-semibold text-slate-900 leading-snug">
@@ -66,19 +111,16 @@ export default function PropertyCard({ property }: { property: any }) {
           📍 {property.location}
         </p>
 
-        {/* AMENITIES */}
+        {/* AMENITIES (lightweight, Airbnb style) */}
         <div className="mt-3 flex flex-wrap gap-2 text-xs">
-          {property.wifi && (
-            <span className="rounded-full bg-slate-100 px-3 py-1">
-              ⚡ High-speed WiFi
+          {property.amenities.slice(0, 3).map((a: string) => (
+            <span
+              key={a}
+              className="rounded-full bg-slate-100 px-3 py-1"
+            >
+              {a}
             </span>
-          )}
-
-          {property.power && (
-            <span className="rounded-full bg-slate-100 px-3 py-1">
-              🔌 Power Backup
-            </span>
-          )}
+          ))}
         </div>
 
         {/* PRICE */}
@@ -92,7 +134,7 @@ export default function PropertyCard({ property }: { property: any }) {
           </div>
         )}
 
-        {/* TRUST + CTA */}
+        {/* FOOTER */}
         <div className="mt-5 flex items-center justify-between">
           <p className="text-xs text-slate-500">
             ✓ No booking fees
