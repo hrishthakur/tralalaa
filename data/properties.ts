@@ -282,4 +282,89 @@ export const properties: Property[] = [
       },
     ],
   },
+
+  {
+    slug: "jibhi-Tree-House",
+    name: "Jibhi Tree House",
+    location: "Jibhi",
+    roomCapacity: 2,
+
+    images: {
+      cover: "/images/properties/jibhi_2.webp",
+      gallery: [
+        "/images/properties/jibhi.webp",
+        "/images/properties/jibhi_3.webp",
+      ],
+    },
+
+    seo: {
+      title: "Jibhi Tree House | Remote Work Stay in Jibhi",
+      description:
+        "Remote-work friendly stay in Jibhi with high-speed WiFi, power backup, mountain views, and long-stay discounts.",
+    },
+
+    content: {
+      about:
+        "Jibhi Tree House is a peaceful mountain stay designed for remote professionals. It offers reliable Wi-Fi, a calm environment, and long-stay friendly pricing — ideal for focused work and slow living.",
+      idealFor: [
+        "Remote professionals",
+        "Long stays",
+        "Solo travelers",
+        "Couples",
+      ],
+    },
+
+    amenities: [
+      "High-speed WiFi",
+      "Power Backup",
+      "Dedicated Workspace",
+      "Mountain View",
+      "Fully Equipped Kitchen",
+    ],
+
+    highlights: [
+      "Quiet & nature-focused",
+      "Long-stay discounts",
+      "Work-friendly setup",
+    ],
+
+    policies: {
+      cancellation: "Free cancellation up to 1 days before check-in",
+      houseRules: [
+        "No smoking inside rooms",
+        "Quiet hours after 10 PM",
+        "No parties or events",
+      ],
+    },
+
+    pricing: [
+      {
+        id: "short",
+        label: "Short stay",
+        minNights: 1,
+        pricePerDay: 1600,
+        gstPercent: 5,
+        maxGuests: 2,
+        extraGuestPrice: 1600,
+      },
+      {
+        id: "weekly",
+        label: "Weekly stay",
+        minNights: 7,
+        pricePerDay: 1200,
+        gstPercent: 5,
+        maxGuests: 2,
+        extraGuestPrice: 400,
+      },
+      {
+        id: "monthly",
+        label: "Monthly stay",
+        minNights: 31,
+        pricePerDay: 900,
+        gstPercent: 5,
+        maxGuests: 2,
+        extraGuestPrice: 300,
+      },
+    ],
+  },
 ];
