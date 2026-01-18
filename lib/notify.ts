@@ -1,7 +1,8 @@
 export type BookingLead = {
   name: string;
-  email: string;
-  phone?: string;
+  phone: string;
+  email?: string;
+  message?: string;
 
   propertySlug?: string;
   propertyName?: string;
@@ -11,20 +12,32 @@ export type BookingLead = {
   departure?: string;
   guests?: number;
   nights?: number;
-
-  message?: string;
 };
 
 export async function sendNotification(data: BookingLead) {
-  await fetch(process.env.NEXT_PUBLIC_NOTIFY_URL!, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      type: "BOOKING_ENQUIRY",
-      timestamp: new Date().toISOString(),
-      payload: data,
-    }),
-  });
+  const controller = new AbortController();
+
+  // Safety timeout (10s)
+  const timeout = setTimeout(() => controller.abort(), 10000);
+
+  try {
+    const res = await fetch("/api/bookings", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(data),
+      signal: controller.signal,
+    });
+
+    if (!res.ok) {
+      const error = await res.text();
+      throw new Error(`Booking notification failed: ${error}`);
+    }
+
+    return await res.json();
+  } finally {
+    clearTimeout(timeout);
+  }
 }
