@@ -6,26 +6,32 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Remote Mountain Stays | Work From Nature",
   description:
-    "Work remotely from mountains with high-speed WiFi, power backup, and long-term stays.",
+    "Premium mountain stays designed for remote professionals — reliable WiFi, power backup, and calm work-first environments.",
   keywords: [
     "remote work stays",
     "work from mountains",
     "digital nomad india",
-    "co-living mountains"
+    "remote work india",
+    "work from nature",
   ],
   openGraph: {
     title: "Remote Mountain Stays",
-    description: "Premium mountain stays for remote workers.",
-    images: ["/images/hero.jpg"]
-  }
+    description:
+      "Thoughtfully designed mountain stays for focused remote work.",
+    images: ["/images/hero.jpg"],
+  },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className="antialiased">
+      <body className="bg-background text-foreground font-sans">
         <Navbar />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
