@@ -145,6 +145,21 @@
   }
 }
 
+.hero-bg {
+  background:
+    radial-gradient(
+      1200px 600px at 20% 30%,
+      hsl(var(--primary) / 0.35),
+      transparent 60%
+    ),
+    linear-gradient(
+      to bottom right,
+      hsl(222 47% 8%),
+      hsl(222 47% 14%)
+    );
+}
+
+
 /* ----------------------------------
    Accessibility
 ----------------------------------- */

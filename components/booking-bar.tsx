@@ -59,18 +59,18 @@ export default function BookingBar() {
       aria-label="Search available stays"
       className="
         mx-auto
-        w-full max-w-5xl
-        rounded-2xl
+        w-full max-w-4xl
+        rounded-xl
         bg-white
-        p-4
-        shadow-xl shadow-black/10
+        px-3 py-3
+        shadow-lg shadow-black/10
       "
     >
       <div
         className="
           grid
           grid-cols-1
-          gap-3
+          gap-2
           md:grid-cols-[1.4fr_1fr_1fr_auto]
           md:items-center
         "
@@ -80,7 +80,7 @@ export default function BookingBar() {
           <label className="sr-only">Location</label>
           <select
             {...register("location", { required: true })}
-            className="booking-input"
+            className="booking-input h-10 text-sm"
           >
             <option value="" disabled>
               Select location
@@ -100,7 +100,7 @@ export default function BookingBar() {
             {...register("arrival", { required: true })}
             type="date"
             min={todayISO()}
-            className="booking-input"
+            className="booking-input h-10 text-sm"
           />
         </div>
 
@@ -111,7 +111,7 @@ export default function BookingBar() {
             {...register("departure", { required: true })}
             type="date"
             min={arrival || todayISO()}
-            className="booking-input"
+            className="booking-input h-10 text-sm"
           />
         </div>
 
@@ -119,7 +119,14 @@ export default function BookingBar() {
         <button
           type="submit"
           disabled={isDisabled}
-          className="booking-cta disabled:opacity-60 disabled:cursor-not-allowed"
+          className="
+            booking-cta
+            h-10
+            px-5
+            text-sm
+            disabled:opacity-60
+            disabled:cursor-not-allowed
+          "
         >
           Check availability
         </button>
