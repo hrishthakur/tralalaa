@@ -1,13 +1,20 @@
-import { visionContent } from "./vision.config";
+import { visionContent } from "./visionContent";
 
 export default function VisionClosing() {
   const { closing } = visionContent;
 
   return (
-    <section className="mx-auto max-w-6xl px-6 py-24 border-t">
-      <div className="max-w-3xl space-y-6">
-        <h2 className="text-3xl font-medium">{closing.title}</h2>
-        <p className="text-lg text-neutral-700 leading-relaxed">
+    <section className="section border-t">
+      <div className="max-w-7xl mx-auto px-6">
+        <p className="text-sm uppercase tracking-wide text-muted-foreground">
+          Closing thought
+        </p>
+
+        <h2 className="mt-3 text-3xl font-semibold">
+          {closing.title}
+        </h2>
+
+        <p className="mt-6 max-w-3xl text-lg text-muted-foreground leading-relaxed">
           {closing.description}
         </p>
       </div>
