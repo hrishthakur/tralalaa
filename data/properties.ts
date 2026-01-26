@@ -22,6 +22,8 @@ export type Property = {
   name: string;
   location: string;
   roomCapacity: number;
+  
+  wifiSpeed: number;
 
   images: {
     cover: string;
@@ -57,6 +59,8 @@ export const properties: Property[] = [
     name: "Jibhi Sunshine Cafe",
     location: "Jibhi",
     roomCapacity: 2,
+
+    wifiSpeed: 40, //mbps
 
     images: {
       cover: "/images/properties/jibhi/cover.avif",
@@ -147,9 +151,13 @@ export const properties: Property[] = [
     location: "Manali",
     roomCapacity: 2,
 
+
+    wifiSpeed: 50, //mbps
+
+
     images: {
       cover: "/images/properties/nagar/cover.avif",
-      gallery: [], // ✅ FIXED
+      gallery: [],
     },
 
     seo: {
@@ -221,6 +229,9 @@ export const properties: Property[] = [
     name: "Nagar Mountain Loft XL",
     location: "Nagar",
     roomCapacity: 2,
+
+    wifiSpeed: 50, //mbps
+  
 
     images: {
       cover: "/images/properties/nagar/cover.avif",
@@ -294,6 +305,9 @@ export const properties: Property[] = [
     name: "Jibhi Tree House",
     location: "Jibhi",
     roomCapacity: 2,
+
+    wifiSpeed: 30, //mbps
+
 
     images: {
       cover: "/images/properties/jibhi/cover.avif",
