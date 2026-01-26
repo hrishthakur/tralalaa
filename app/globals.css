@@ -1,73 +1,58 @@
-@import "tailwindcss";
-
-/* ----------------------------------
-   Design Tokens (Semantic, Scalable)
------------------------------------ */
-:root {
-  /* Core surfaces */
-  --background: 0 0% 100%;
-  --foreground: 222 47% 11%;
-
-  --card: 0 0% 100%;
-  --card-foreground: 222 47% 11%;
-
-  /* Brand */
-  --primary: 222 47% 11%;
-  --primary-foreground: 210 40% 98%;
-
-  /* UI states */
-  --muted: 210 40% 96%;
-  --muted-foreground: 215 16% 47%;
-
-  --border: 214 32% 91%;
-  --input: 214 32% 91%;
-  --ring: 222 47% 11%;
-
-  /* Elevation & shape */
-  --radius: 12px;
-  --shadow: 222 47% 11%;
-}
-
-.dark {
-  --background: 222 47% 11%;
-  --foreground: 210 40% 98%;
-
-  --card: 222 47% 15%;
-  --card-foreground: 210 40% 98%;
-
-  --primary: 210 40% 98%;
-  --primary-foreground: 222 47% 11%;
-
-  --muted: 217 32% 17%;
-  --muted-foreground: 215 20% 65%;
-
-  --border: 217 32% 17%;
-  --input: 217 32% 17%;
-  --ring: 210 40% 98%;
-
-  --shadow: 0 0% 0%;
-}
-
-/* ----------------------------------
-   Base Styles
------------------------------------ */
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+@import "tailwindcss";
+
+/* =====================================
+   BRAND TOKENS — PROFESSIONAL & PREMIUM
+===================================== */
+:root {
+  /* Base surfaces */
+  --background: 210 20% 98%;        /* Soft off-white */
+  --foreground: 222 22% 15%;        /* Ink */
+
+  /* Cards */
+  --card: 0 0% 100%;
+  --card-foreground: 222 22% 15%;
+
+  /* Accent (Deep Indigo) */
+  --primary: 230 48% 36%;           /* Indigo */
+  --primary-foreground: 210 20% 98%;
+
+  /* Muted UI */
+  --muted: 220 16% 95%;
+  --muted-foreground: 220 10% 45%;
+
+  /* Borders & focus */
+  --border: 220 14% 90%;
+  --input: 220 14% 90%;
+  --ring: 230 48% 36%;
+
+  /* Shape & elevation */
+  --radius: 14px;
+  --shadow: 222 22% 15%;
+}
+
+/* =====================================
+   BASE STYLES
+===================================== */
+@layer base {
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-inter), system-ui, sans-serif;
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
   }
 
   h1,
   h2,
   h3 {
+    font-family: var(--font-fraunces), serif;
     letter-spacing: -0.025em;
     color: hsl(var(--foreground));
   }
@@ -77,62 +62,42 @@
   }
 }
 
-/* ----------------------------------
-   Design System Components
------------------------------------ */
+/* =====================================
+   LAYOUT & COMPONENT PRIMITIVES
+===================================== */
 @layer components {
-  /* Layout rhythm */
   .section {
-    @apply py-24 md:py-28;
-  }
-
-  .hero-section {
-    @apply py-36 md:py-44;
+    @apply py-24 md:py-32;
   }
 
   /* Card */
   .card {
     background-color: hsl(var(--card));
-    color: hsl(var(--card-foreground));
-    border: 1px solid hsl(var(--border));
     border-radius: var(--radius);
-    box-shadow: 0 2px 8px hsl(var(--shadow) / 0.06);
+    border: 1px solid hsl(var(--border));
+    box-shadow: 0 12px 32px hsl(var(--shadow) / 0.08);
     @apply p-6;
   }
 
   /* Inputs */
   .booking-input {
-    height: 3rem;
+    height: 3.25rem;
     border-radius: var(--radius);
     border: 1px solid hsl(var(--input));
-    background-color: hsl(var(--background));
+    background-color: #fff;
     color: hsl(var(--foreground));
     @apply w-full px-4 text-sm transition;
-  }
-
-  .booking-input::placeholder {
-    color: hsl(var(--muted-foreground));
   }
 
   .booking-input:focus {
     outline: none;
     border-color: hsl(var(--ring));
-    box-shadow: 0 0 0 2px hsl(var(--ring) / 0.2);
-  }
-
-  /* Date input fix */
-  input[type="date"] {
-    color: hsl(var(--foreground));
-  }
-
-  input[type="date"]::-webkit-calendar-picker-indicator {
-    opacity: 0.6;
-    cursor: pointer;
+    box-shadow: 0 0 0 3px hsl(var(--ring) / 0.2);
   }
 
   /* Primary CTA */
   .booking-cta {
-    height: 3rem;
+    height: 3.25rem;
     border-radius: var(--radius);
     background-color: hsl(var(--primary));
     color: hsl(var(--primary-foreground));
@@ -141,31 +106,6 @@
   }
 
   .booking-cta:hover {
-    opacity: 0.9;
-  }
-}
-
-.hero-bg {
-  background:
-    radial-gradient(
-      1200px 600px at 20% 30%,
-      hsl(var(--primary) / 0.35),
-      transparent 60%
-    ),
-    linear-gradient(
-      to bottom right,
-      hsl(222 47% 8%),
-      hsl(222 47% 14%)
-    );
-}
-
-
-/* ----------------------------------
-   Accessibility
------------------------------------ */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
+    background-color: hsl(230 48% 32%);
   }
 }

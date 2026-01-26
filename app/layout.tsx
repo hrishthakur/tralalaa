@@ -2,6 +2,21 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import type { Metadata } from "next";
+import { Inter, Fraunces } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  display: "swap",
+});
+
+
 
 export const metadata: Metadata = {
   title: "Remote Mountain Stays | Work From Nature",
@@ -28,7 +43,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="antialiased">
+    <html
+  lang="en"
+  className={`${inter.variable} ${fraunces.variable}`}>
       <body className="bg-background text-foreground font-sans">
         <Navbar />
         <main>{children}</main>
