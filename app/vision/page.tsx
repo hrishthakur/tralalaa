@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function VisionPage() {
   return (
-    <main className="bg-white">
+    <main>
       <VisionHero />
       <VisionStatement />
       <VisionPrinciples />
