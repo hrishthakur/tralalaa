@@ -1,11 +1,11 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from 'next';
+import { SITE_CONFIG } from '@/lib/site';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
-    { url: "https://yourdomain.com", priority: 1 },
-    { url: "https://yourdomain.com/locations" },
-    { url: "https://yourdomain.com/book" },
-    { url: "https://yourdomain.com/vision" },
-    { url: "https://yourdomain.com/contact" }
+    {
+      url: `${SITE_CONFIG.url}/`,
+      lastModified: new Date(),
+    },
   ];
 }

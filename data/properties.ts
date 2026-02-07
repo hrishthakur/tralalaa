@@ -235,7 +235,7 @@ export const properties: Property[] = [
 
     images: {
       cover: "/images/properties/nagar/cover.avif",
-      gallery: [], // ✅ FIXED
+      gallery: [],
     },
 
     seo: {

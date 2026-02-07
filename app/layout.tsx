@@ -3,6 +3,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import type { Metadata } from "next";
 import { Inter, Fraunces } from "next/font/google";
+import { SITE_CONFIG } from '@/lib/site';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -16,9 +17,12 @@ const fraunces = Fraunces({
   display: "swap",
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://localhost.com';
 
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_CONFIG.url),
   title: "Remote Mountain Stays | Work From Nature",
   description:
     "Premium mountain stays designed for remote professionals — reliable WiFi, power backup, and calm work-first environments.",
