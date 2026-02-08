@@ -189,11 +189,49 @@ function BookingCard({
 /* ================= MOBILE STICKY ================= */
 
 function MobileStickyBar({ pricing }: any) {
-  if (!pricing) return null;
+  const hasPrice = Boolean(pricing);
 
   return (
     <div className="lg:hidden fixed bottom-0 inset-x-0 bg-white border-t p-4 flex justify-between items-center">
-      {/* unchanged */}
+      <div>
+        {hasPrice ? (
+          <>
+            <p className="text-sm font-semibold">
+              ₹{formatINR(pricing.discountedTotal)}
+            </p>
+            <p className="text-xs text-slate-500">
+              ₹{formatINR(pricing.perNight)} / night
+            </p>
+          </>
+        ) : (
+          <>
+            <p className="text-sm font-semibold text-slate-700">
+              Select dates
+            </p>
+            <p className="text-xs text-slate-500">
+              Prices shown after dates
+            </p>
+          </>
+        )}
+      </div>
+
+      {hasPrice ? (
+        <a
+          href="#booking"
+          className="bg-red-500 text-white px-6 py-2 rounded-lg font-medium"
+        >
+          Enquire
+        </a>
+      ) : (
+        <button
+          disabled
+          className="bg-slate-200 text-slate-500 px-6 py-2 rounded-lg font-medium cursor-not-allowed"
+        >
+          Select dates
+        </button>
+      )}
     </div>
   );
 }
+
+    
