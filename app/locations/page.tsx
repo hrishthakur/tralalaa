@@ -1,8 +1,9 @@
 import { properties } from "@/data/properties";
 import PropertyCard from "@/components/property-card";
+import { SITE_CONFIG } from '@/lib/site';
 
 export const metadata = {
-  title: "Locations | Remote Work Stays",
+  title: `Locations | ${SITE_CONFIG.name}`,
   description:
     "Explore remote-work friendly stays across beautiful mountain locations. High-speed WiFi, long stays, and peaceful environments.",
 };

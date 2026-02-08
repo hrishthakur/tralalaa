@@ -6,11 +6,12 @@ import {
   ShieldCheck,
   Quote,
 } from "lucide-react";
+import { SITE_CONFIG } from '@/lib/site';
 
 export const metadata = {
-  title: "List Your Property | Partner with Remote Work Stays",
+  title: `List Your Property | Partner with ${SITE_CONFIG.name}`,
   description:
-    "Partner with Remote Work Stays to host long-term remote professionals. Stable occupancy, verified guests, and work-ready standards.",
+    `Partner with ${SITE_CONFIG.name} to host long-term remote professionals. Stable occupancy, verified guests, and work-ready standards.`,
 };
 
 export default function ListYourPropertyPage() {
@@ -77,7 +78,7 @@ export default function ListYourPropertyPage() {
             </h2>
 
             <p className="mt-4">
-              Remote Work Stays focuses on fewer bookings, longer stays,
+              {SITE_CONFIG.name} focuses on fewer bookings, longer stays,
               and guests who treat your property like a home —
               not a hotel room.
             </p>

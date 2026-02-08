@@ -3,16 +3,21 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import Link from "next/link";
+} from '@/components/ui/accordion';
+import { Card, CardContent } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
+import Link from 'next/link';
+import { SITE_CONFIG } from '@/lib/site';
+
+/* ================= METADATA ================= */
 
 export const metadata = {
-  title: "FAQs | Remote Work Stays",
+  title: `FAQs | ${SITE_CONFIG.name}`,
   description:
-    "Frequently asked questions about remote work stays, long-term bookings, Wi-Fi, workspaces, and workcation-friendly accommodation.",
+    'Frequently asked questions about remote work stays, long-term bookings, Wi-Fi, workspaces, and workcation-friendly accommodation.',
 };
+
+/* ================= PAGE ================= */
 
 export default function FAQPage() {
   return (
@@ -47,8 +52,8 @@ export default function FAQPage() {
               <Accordion type="single" collapsible className="space-y-2">
                 <FAQItem
                   value="item-1"
-                  question="What is Remote Work Stays?"
-                  answer="Remote Work Stays is a curated platform offering work-friendly stays in mountain and nature-led destinations. Our properties are designed specifically for remote professionals who need reliable internet, comfortable living spaces, and a calm environment to work from."
+                  question={`What is ${SITE_CONFIG.name}?`}
+                  answer={`${SITE_CONFIG.name} is a curated platform offering work-friendly stays in mountain and nature-led destinations. Our properties are designed specifically for remote professionals who need reliable internet, comfortable living spaces, and a calm environment to work from.`}
                 />
 
                 <FAQItem

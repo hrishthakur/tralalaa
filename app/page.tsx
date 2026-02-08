@@ -1,48 +1,85 @@
-import BookingBar from "@/components/booking-bar";
-import PropertyCard from "@/components/property-card";
-import FeatureCard from "@/components/feature-card";
-import { properties } from "@/data/properties";
+import BookingBar from '@/components/booking-bar';
+import PropertyCard from '@/components/property-card';
+import FeatureCard from '@/components/feature-card';
+import { properties } from '@/data/properties';
 import {
   Card,
   CardHeader,
   CardContent,
-} from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
+} from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
 import {
   Wifi,
   Home as HomeIcon,
   MapPin,
   Receipt,
-} from "lucide-react";
+} from 'lucide-react';
+import { SITE_CONFIG } from '@/lib/site';
 
 export default function Home() {
   return (
     <>
-      {/* ================= SEARCH / HERO ================= */}
-      <section className="section">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-light leading-tight">
-              Remote work,
+      {/* ================= HERO ================= */}
+      <section
+        className="
+          relative
+          min-h-[85vh]
+          flex items-center
+          bg-cover bg-center
+          bg-fixed
+        "
+        style={{
+          backgroundImage: "url('/images/background.png')",
+        }}
+      >
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/20" />
+
+        {/* Content Container */}
+        <div className="relative max-w-7xl mx-auto px-6 w-full">
+          {/* Headline block */}
+          <div className="max-w-3xl text-white backdrop-blur-sm bg-black/30 rounded-2xl p-8 md:p-10">
+            {/* Brand */}
+            <p className="mb-4 text-sm uppercase tracking-widest text-white/80">
+              {SITE_CONFIG.name}
+            </p>
+
+            {/* Value proposition */}
+            <h1
+              className="
+                text-5xl md:text-6xl
+                font-serif
+                font-medium
+                leading-tight
+                text-white
+              "
+            >
+              Designed for long
               <br />
-              designed for long mountain stays
+              mountain stays
             </h1>
 
-            <p className="mt-6 text-lg max-w-2xl">
-              Purpose-built homes in calm mountain towns, created for
-              professionals who need focus, stability, and reliable
-              infrastructure for everyday work.
+            {/* Supporting copy */}
+            <p className="mt-6 text-lg max-w-2xl text-white/85 font-sans">
+              Purpose-built homes in calm mountain towns, created for professionals
+              who need focus, stability, and reliable infrastructure for everyday work.
             </p>
           </div>
 
-          {/* Booking Bar as Primary Surface */}
-          <div className="mt-16 max-w-4xl">
-            <Card>
+          {/* Booking Bar */}
+          <div className="mt-20 max-w-4xl animate-fade-up">
+            <Card className="bg-white/95 backdrop-blur-md shadow-xl">
               <CardContent className="p-4">
                 <BookingBar />
               </CardContent>
             </Card>
           </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center text-white/70 text-xs">
+          <span className="mb-2">Scroll</span>
+          <div className="h-6 w-px bg-white/50 animate-pulse" />
         </div>
       </section>
 
@@ -54,7 +91,7 @@ export default function Home() {
           <Card className="border-none shadow-none bg-transparent">
             <CardHeader className="px-0">
               <p className="text-sm uppercase tracking-wide text-muted-foreground">
-                Why Remote Work Stays
+                Why {SITE_CONFIG.name}
               </p>
 
               <h2 className="mt-2 text-3xl font-semibold max-w-2xl">
@@ -130,7 +167,7 @@ export default function Home() {
   );
 }
 
-/* ================= SUB COMPONENT ================= */
+/* ================= SUB ================= */
 
 function SectionDivider() {
   return (

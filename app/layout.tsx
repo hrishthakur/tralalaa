@@ -1,45 +1,71 @@
-import "./globals.css";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
-import type { Metadata } from "next";
-import { Inter, Fraunces } from "next/font/google";
+import './globals.css';
+import Navbar from '@/components/navbar';
+import Footer from '@/components/footer';
+import type { Metadata } from 'next';
+import { Inter, Fraunces } from 'next/font/google';
 import { SITE_CONFIG } from '@/lib/site';
 
+/* ================= FONTS ================= */
+
 const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
 });
 
 const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-fraunces",
-  display: "swap",
+  subsets: ['latin'],
+  variable: '--font-fraunces',
+  display: 'swap',
 });
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://localhost.com';
-
+/* ================= METADATA ================= */
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.url),
-  title: "Remote Mountain Stays | Work From Nature",
-  description:
-    "Premium mountain stays designed for remote professionals — reliable WiFi, power backup, and calm work-first environments.",
+
+  title: {
+    default: SITE_CONFIG.name,
+    template: `%s | ${SITE_CONFIG.name}`,
+  },
+
+  description: SITE_CONFIG.description,
+
   keywords: [
-    "remote work stays",
-    "work from mountains",
-    "digital nomad india",
-    "remote work india",
-    "work from nature",
+    'remote work stays',
+    'bungstays',
+    'work from mountains',
+    'digital nomad india',
+    'remote work india',
+    'work from nature',
+    SITE_CONFIG.name.toLowerCase(),
   ],
+
   openGraph: {
-    title: "Remote Mountain Stays",
-    description:
-      "Thoughtfully designed mountain stays for focused remote work.",
-    images: ["/images/hero.jpg"],
+    type: 'website',
+    url: SITE_CONFIG.url,
+    siteName: SITE_CONFIG.name,
+    title: SITE_CONFIG.name,
+    description: SITE_CONFIG.description,
+    images: [
+      {
+        url: '/images/hero.png',
+        width: 1200,
+        height: 630,
+        alt: SITE_CONFIG.name,
+      },
+    ],
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: SITE_CONFIG.name,
+    description: SITE_CONFIG.description,
+    images: ['/images/hero.png'],
   },
 };
+
+/* ================= ROOT LAYOUT ================= */
 
 export default function RootLayout({
   children,
@@ -48,11 +74,14 @@ export default function RootLayout({
 }) {
   return (
     <html
-  lang="en"
-  className={`${inter.variable} ${fraunces.variable}`}>
-      <body className="bg-background text-foreground font-sans">
+      lang="en"
+      className={`${inter.variable} ${fraunces.variable}`}
+    >
+      <body className="bg-background text-foreground font-sans antialiased">
         <Navbar />
-        <main>{children}</main>
+        <main className="min-h-screen">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

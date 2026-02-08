@@ -1,15 +1,16 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import {
-  Mail,
-  Phone,
-} from "lucide-react";
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
+import { Mail, Phone } from 'lucide-react';
+import { SITE_CONFIG } from '@/lib/site';
+
+/* ================= METADATA ================= */
 
 export const metadata = {
-  title: "Contact Us | Remote Work Stays",
-  description:
-    "Get in touch with Remote Work Stays. Reach us via email or phone for bookings, partnerships, or general enquiries.",
+  title: `Contact Us | ${SITE_CONFIG.name}`,
+  description: `Get in touch with ${SITE_CONFIG.name}. Reach us via email or phone for bookings, partnerships, or general enquiries.`,
 };
+
+/* ================= PAGE ================= */
 
 export default function ContactPage() {
   return (
@@ -47,9 +48,7 @@ export default function ContactPage() {
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted">
                     <Mail className="h-5 w-5 text-foreground" />
                   </div>
-                  <h2 className="text-xl font-medium">
-                    Email us
-                  </h2>
+                  <h2 className="text-xl font-medium">Email us</h2>
                 </div>
               </CardHeader>
 
@@ -65,10 +64,10 @@ export default function ContactPage() {
                       Bookings & support
                     </p>
                     <a
-                      href="mailto:pthakur3320@gmail.com"
+                      href={`mailto:${SITE_CONFIG.email}`}
                       className="font-medium hover:underline"
                     >
-                      pthakur3320@gmail.com
+                      {SITE_CONFIG.email}
                     </a>
                   </div>
 
@@ -77,10 +76,10 @@ export default function ContactPage() {
                       Partnerships
                     </p>
                     <a
-                      href="mailto:partners@remoteworkstays.com"
+                      href={`mailto:partners@bungstays.com`}
                       className="font-medium hover:underline"
                     >
-                      partners@remoteworkstays.com
+                      partners@bungstays.com
                     </a>
                   </div>
                 </div>
@@ -94,9 +93,7 @@ export default function ContactPage() {
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-muted">
                     <Phone className="h-5 w-5 text-foreground" />
                   </div>
-                  <h2 className="text-xl font-medium">
-                    Call us
-                  </h2>
+                  <h2 className="text-xl font-medium">Call us</h2>
                 </div>
               </CardHeader>
 
@@ -123,12 +120,9 @@ export default function ContactPage() {
                     <p className="text-muted-foreground">
                       Alternate contact
                     </p>
-                    <a
-                      href="tel:+91YYYYYYYYYY"
-                      className="font-medium hover:underline"
-                    >
-                      +91 YYYYY YYYYY
-                    </a>
+                    <span className="text-slate-400">
+                      Available soon
+                    </span>
                   </div>
                 </div>
               </CardContent>

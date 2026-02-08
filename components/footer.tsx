@@ -1,3 +1,4 @@
+import { SITE_CONFIG } from '@/lib/site';
 export default function Footer() {
   return (
     <footer className="border-t bg-slate-50">
@@ -7,11 +8,9 @@ export default function Footer() {
           {/* BRAND */}
           <div>
             <h3 className="text-lg font-semibold text-slate-900">
-              Remote Work Stays
-            </h3>
+  {SITE_CONFIG.name}            </h3>
             <p className="mt-3 text-sm text-slate-600 max-w-xs">
-              Purpose-built mountain stays for remote professionals who value
-              focus, comfort, and reliable connectivity.
+              {SITE_CONFIG.description}
             </p>
           </div>
 
@@ -74,13 +73,12 @@ export default function Footer() {
         {/* BOTTOM BAR */}
         <div className="mt-14 pt-8 border-t flex flex-col md:flex-row items-center justify-between text-sm text-slate-500">
           <p>
-            © {new Date().getFullYear()} Remote Work Stays. All rights reserved.
-          </p>
+  ©         {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.          </p>
           <p className="mt-4 md:mt-0">
-            Built for remote professionals
+              {SITE_CONFIG.tagline}
           </p>
         </div>
-      </div>
+      </div> 
     </footer>
   );
 }

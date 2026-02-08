@@ -1,11 +1,15 @@
-import { blogs } from "@/data/blogs";
-import BlogCard from "@/components/blog-card";
+import { blogs } from '@/data/blogs';
+import BlogCard from '@/components/blog-card';
+import { SITE_CONFIG } from '@/lib/site';
+
+/* ================= METADATA ================= */
 
 export const metadata = {
-  title: "Travel & Remote Work Blog | Remote Work Stays",
-  description:
-    "Stories, guides, and tips on remote work stays, slow travel, and working from the mountains.",
+  title: `Travel & Remote Work Blog | ${SITE_CONFIG.name}`,
+  description: `Stories, guides, and tips on remote work, slow travel, and work-friendly stays by ${SITE_CONFIG.name}.`,
 };
+
+/* ================= PAGE ================= */
 
 export default function BlogPage() {
   return (
@@ -16,7 +20,7 @@ export default function BlogPage() {
           Travel & Remote Work Blog
         </h1>
         <p className="mt-3 max-w-2xl mx-auto text-slate-600">
-          Stories, guides, and insights on working remotely from the mountains.
+          Stories, guides, and insights on working remotely from the mountains with {SITE_CONFIG.name}.
         </p>
       </header>
 

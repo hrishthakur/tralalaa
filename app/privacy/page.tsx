@@ -1,7 +1,9 @@
+import { SITE_CONFIG } from '@/lib/site';
+
 export const metadata = {
-  title: "Privacy Policy | Remote Work Stays",
+  title: `Privacy Policy | ${SITE_CONFIG.name}`,
   description:
-    "Learn how Remote Work Stays collects, uses, and protects your personal information.",
+    `Learn how ${SITE_CONFIG.name} collects, uses, and protects your personal information.`,
 };
 
 export default function PrivacyPolicyPage() {

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import MobileMenu from "./mobile-menu";
+import { SITE_CONFIG } from '@/lib/site';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -23,11 +24,11 @@ export default function Navbar() {
             className="group flex flex-col leading-tight"
           >
             <span className="text-lg font-semibold tracking-tight">
-              Remote Work Stays
-            </span>
-            <span className="hidden sm:block text-xs text-muted-foreground group-hover:text-foreground transition">
-              Work-ready mountain stays
-            </span>
+  {SITE_CONFIG.name}
+</span>
+<span className="hidden sm:block text-xs text-muted-foreground group-hover:text-foreground transition">
+  {SITE_CONFIG.tagline}
+</span>
           </Link>
 
           {/* ================= MOBILE TOGGLE ================= */}

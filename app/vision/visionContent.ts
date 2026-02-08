@@ -1,3 +1,5 @@
+import { SITE_CONFIG } from '@/lib/site';
+
 export const visionContent = {
   hero: {
     eyebrow: "Our Vision",
@@ -9,7 +11,7 @@ export const visionContent = {
   statement: {
     title: "What We’re Building",
     paragraphs: [
-      "Remote Work Stays is creating a global network of carefully curated homes designed specifically for modern professionals.",
+      `${SITE_CONFIG.name} is creating a global network of carefully curated homes designed specifically for modern professionals.`,
       "These are work-first environments — not hotels, not short-term rentals — but places where connectivity, comfort, and clarity are intentionally engineered.",
     ],
   },
@@ -38,6 +40,6 @@ export const visionContent = {
   closing: {
     title: "A Calmer Way to Work, Without Compromise",
     description:
-      "Remote Work Stays exists for professionals who think long-term — about their careers, health, and lifestyle. We are not following remote work trends. We are designing the infrastructure behind them.",
+      `${SITE_CONFIG.name} exists for professionals who think long-term — about their careers, health, and lifestyle. We are not following remote work trends. We are designing the infrastructure behind them.`,
   },
 };
