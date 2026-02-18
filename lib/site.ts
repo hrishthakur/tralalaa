@@ -6,7 +6,7 @@ export const SITE_CONFIG = {
   /** URL (safe for all envs) */
   url:
     process.env.NEXT_PUBLIC_SITE_URL ??
-    'http://localhost:3000',
+    'https://www.bungstays.com',
 
   /** Locale */
   country: 'IN',

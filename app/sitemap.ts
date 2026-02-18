@@ -1,11 +1,43 @@
-import type { MetadataRoute } from 'next';
-import { SITE_CONFIG } from '@/lib/site';
-
-export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: `${SITE_CONFIG.url}/`,
-      lastModified: new Date(),
-    },
-  ];
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.bungstays.com/</loc>
+    <lastmod>2026-02-18T12:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.bungstays.com/vision/</loc>
+    <lastmod>2026-02-18T12:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.bungstays.com/locations/</loc>
+    <lastmod>2026-02-18T12:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.bungstays.com/faq/</loc>
+    <lastmod>2026-02-18T12:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.bungstays.com/contact/</loc>
+    <lastmod>2026-02-18T12:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.bungstays.com/list-your-property/</loc>
+    <lastmod>2026-02-18T12:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.bungstays.com/locations/jibhi-sunshine-cafe/</loc>
+    <lastmod>2026-02-18T12:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.bungstays.com/locations/the-martins-manali/</loc>
+    <lastmod>2026-02-18T12:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.bungstays.com/locations/nagar-mountain-loft-xl/</loc>
+    <lastmod>2026-02-18T12:00:00+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.bungstays.com/locations/jibhi-tree-house/</loc>
+    <lastmod>2026-02-18T12:00:00+00:00</lastmod>
+  </url>
+</urlset>

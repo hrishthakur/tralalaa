@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 import MobileMenu from "./mobile-menu";
 import { SITE_CONFIG } from '@/lib/site';
 
@@ -23,6 +24,16 @@ export default function Navbar() {
             href="/"
             className="group flex flex-col leading-tight"
           >
+             {/* LOGO */}
+            <Image
+              src="/logo.png"
+              alt="Site logo"
+              width={40}
+              height={40}
+              priority
+              className="rounded-md object-contain"
+            />
+            
             <span className="text-lg font-semibold tracking-tight">
   {SITE_CONFIG.name}
 </span>
