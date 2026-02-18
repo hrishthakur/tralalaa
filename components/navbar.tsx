@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import MobileMenu from "./mobile-menu";
-import { SITE_CONFIG } from '@/lib/site';
+import { SITE_CONFIG } from "@/lib/site";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -19,27 +19,31 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="h-16 flex items-center justify-between">
+          
           {/* ================= BRAND ================= */}
           <Link
             href="/"
-            className="group flex flex-col leading-tight"
+            className="group flex items-center"
           >
-             {/* LOGO */}
-            <Image
-              src="/logo.png"
-              alt="Site logo"
-              width={40}
-              height={40}
-              priority
-              className="rounded-md object-contain"
-            />
-            
-            <span className="text-lg font-semibold tracking-tight">
-  {SITE_CONFIG.name}
-</span>
-<span className="hidden sm:block text-xs text-muted-foreground group-hover:text-foreground transition">
-  {SITE_CONFIG.tagline}
-</span>
+            {SITE_CONFIG.logo?.src && (
+              <Image
+                src={SITE_CONFIG.logo.src}
+                alt={SITE_CONFIG.logo.alt}
+                width={SITE_CONFIG.logo.width}
+                height={SITE_CONFIG.logo.height}
+                priority
+                className="object-contain"
+              />
+            )}
+
+            <div className="flex flex-col leading-tight">
+              <span className="text-lg font-semibold tracking-tight">
+                {SITE_CONFIG.name}
+              </span>
+              <span className="hidden sm:block text-xs text-muted-foreground group-hover:text-foreground transition">
+                {SITE_CONFIG.tagline}
+              </span>
+            </div>
           </Link>
 
           {/* ================= MOBILE TOGGLE ================= */}
@@ -66,7 +70,6 @@ export default function Navbar() {
             <NavLink href="/faq">FAQs</NavLink>
             <NavLink href="/contact">Contact</NavLink>
 
-            {/* PRIMARY CTA */}
             <Link
               href="/list-your-property"
               className="
@@ -88,13 +91,10 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* ================= MOBILE MENU ================= */}
       {open && <MobileMenu close={() => setOpen(false)} />}
     </header>
   );
 }
-
-/* ================= SUB ================= */
 
 function NavLink({
   href,
