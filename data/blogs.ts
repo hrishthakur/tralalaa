@@ -22,7 +22,7 @@ export type BlogPost = {
 export const blogs: BlogPost[] = [
   {
     slug: "remote-work-in-jibhi",
-    title: "Remote Work in Jibhi: A Complete Guide for Digital Nomads",
+    title: "Remote Work in Jibhi: A Complete Guide for Digital Nomad",
     excerpt:
       "Discover why Jibhi is becoming a favorite destination for remote workers seeking nature, focus, and affordability.",
     coverImage: "/images/blogs/jibhi_blog.jpg",
