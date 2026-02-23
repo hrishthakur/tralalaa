@@ -5,8 +5,8 @@
 ===================================== */
 :root {
   /* Base surfaces */
-  --background: 210 20% 98%;
-  --foreground: 222 22% 15%;
+  --background: 40 25% 97%;
+  --foreground: 30 12% 14%;
 
   /* Cards */
   --card: 0 0% 100%;
@@ -26,8 +26,8 @@
   --ring: 230 48% 36%;
 
   /* Shape & elevation */
-  --radius: 14px;
-  --shadow: 222 22% 15%;
+  --radius: 18px;
+  --shadow: 30 20% 20%;
 }
 
 /* =====================================

@@ -1,4 +1,4 @@
-import BookingBar from '@/components/booking-bar';
+import BookingBar from '@/components/booking-bar'; 
 import PropertyCard from '@/components/property-card';
 import FeatureCard from '@/components/feature-card';
 import { properties } from '@/data/properties';
@@ -54,16 +54,20 @@ export default function Home() {
                 text-white
               "
             >
-              Designed for long
+              Focused work.
               <br />
-              mountain stays
+              Meaningful mountain living.
             </h1>
 
             {/* Supporting copy */}
             <p className="mt-6 text-lg max-w-2xl text-white/85 font-sans">
-              Purpose-built homes in calm mountain towns, created for professionals
-              who need focus, stability, and reliable infrastructure for everyday work.
+              Structured stays in calm mountain towns for professionals who want
+              productivity during the week and restoration on the weekend.
+              Choose from 3-day retreats, 7-day focus weeks, or 14-day deep resets.
             </p>
+            <p className="mt-4 text-sm text-white/70">
+              Work normally. Live differently.
+            </p> 
           </div>
 
           {/* Booking Bar */}
@@ -85,6 +89,8 @@ export default function Home() {
 
       <SectionDivider />
 
+      
+
       {/* ================= WHY US ================= */}
       <section className="section">
         <div className="max-w-7xl mx-auto px-6">
@@ -95,13 +101,14 @@ export default function Home() {
               </p>
 
               <h2 className="mt-2 text-3xl font-semibold max-w-2xl">
-                Built for people who actually need to work
+                Built for professionals who need calm to perform at their best
               </h2>
 
               <p className="mt-4 max-w-2xl">
-                These are not vacation rentals or short-term getaways.
-                Every stay is evaluated for livability, comfort,
-                and long-term work suitability.
+                These are not chaotic tourist rentals or random weekend stays.
+                Every Bungstays home is selected for livability, stability,
+                and a balanced daily rhythm — so you can work without friction
+                and rest without needing another vacation afterward.
               </p>
             </CardHeader>
 
@@ -110,22 +117,22 @@ export default function Home() {
                 <FeatureCard
                   icon={Wifi}
                   title="Work-ready infrastructure"
-                  description="Verified Wi-Fi, power backup, and work-friendly layouts — no compromises."
+                  description="Verified high-speed Wi-Fi, power backup, and ergonomic setups designed for real productivity."
                 />
                 <FeatureCard
                   icon={HomeIcon}
-                  title="Designed for long stays"
-                  description="Homes with kitchens, storage, and layouts that work for weeks or months."
+                  title="Designed for real living"
+                  description="Homes with kitchens, storage, privacy, and comfort for stays that last days or weeks."
                 />
                 <FeatureCard
                   icon={MapPin}
                   title="Quiet, livable locations"
-                  description="Mountain towns selected for calm, safety, and everyday living."
+                  description="Calm mountain towns chosen for safety, stability, and everyday life — not party tourism."
                 />
                 <FeatureCard
                   icon={Receipt}
                   title="Transparent pricing"
-                  description="Clear, honest pricing with no hidden fees or surprises."
+                  description="Clear, honest rates with no hidden surprises. Plan confidently from the start."
                 />
               </div>
             </CardContent>
@@ -134,6 +141,79 @@ export default function Home() {
       </section>
 
       <SectionDivider />
+
+      {/* ================= EXPERIENCE OPTIONS ================= */}
+<section className="section">
+  <div className="max-w-7xl mx-auto px-6">
+
+    <p className="text-sm uppercase tracking-wide text-muted-foreground">
+      EXPERIENCE OPTIONS
+    </p>
+
+    <h2 className="mt-2 text-3xl font-semibold max-w-2xl">
+      Choose the reset that fits your life
+    </h2>
+
+    <div className="mt-12 grid md:grid-cols-3 gap-8">
+
+      {/* 3-Day Retreat */}
+      <div>
+        <h3 className="text-xl font-semibold mb-2">
+          🌿 3-Day Weekend Retreat
+        </h3>
+        <p className="mb-4">Short break. Real relief.</p>
+        <p className="text-sm text-muted-foreground mb-4">
+          Perfect for busy professionals who cannot take long leave but need to reset.
+        </p>
+        <ul className="space-y-2 text-sm">
+          <li>• Friday evening arrival — Sunday departure</li>
+          <li>• Deep rest in nature</li>
+          <li>• Optional yoga, hikes, or cultural experiences</li>
+          <li>• Digital detox friendly</li>
+        </ul>
+      </div>
+
+      {/* 7-Day Focus Week */}
+      <div>
+        <h3 className="text-xl font-semibold mb-2">
+          💻 7-Day Focus Week
+        </h3>
+        <p className="mb-4">Work as usual. Feel completely different.</p>
+        <p className="text-sm text-muted-foreground mb-4">
+          The ideal balance of productivity and restoration.
+        </p>
+        <ul className="space-y-2 text-sm">
+          <li>• Full workweek infrastructure</li>
+          <li>• Calm daily rhythm</li>
+          <li>• One curated weekend experience</li>
+          <li>• Most popular choice</li>
+        </ul>
+      </div>
+
+      {/* 14-Day Deep Reset */}
+      <div>
+        <h3 className="text-xl font-semibold mb-2">
+          🌄 14-Day Deep Reset
+        </h3>
+        <p className="mb-4">
+          For clarity, recovery, or creative breakthroughs
+        </p>
+        <p className="text-sm text-muted-foreground mb-4">
+          A slower, more immersive mountain living experience.
+        </p>
+        <ul className="space-y-2 text-sm">
+          <li>• Sustainable routine</li>
+          <li>• Multiple experiences</li>
+          <li>• Strong sense of place</li>
+          <li>• Meaningful mental reset</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<SectionDivider />
 
       {/* ================= LOCATIONS ================= */}
       <section className="section bg-muted">
@@ -145,11 +225,12 @@ export default function Home() {
               </p>
 
               <h2 className="mt-2 text-3xl font-semibold">
-                Available destinations
+                Calm mountain destinations
               </h2>
 
               <p className="mt-3 text-sm text-muted-foreground max-w-2xl">
-                A limited, intentional set of destinations suited for long-term stays
+                A limited collection of towns selected for long-stay comfort,
+                reliable infrastructure, and peaceful surroundings.
               </p>
             </CardHeader>
 
