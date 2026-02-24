@@ -55,37 +55,36 @@ export type Property = {
 
 export const properties: Property[] = [
   {
-    slug: "jibhi-sunshine-cafe",
-    name: "Jibhi Sunshine Cafe",
-    location: "Jibhi",
+    slug: "tirthan-sunshine-cafe",
+    name: "Tirthan Sunshine Cafe",
+    location: "Tirthan",
     roomCapacity: 2,
 
     wifiSpeed: 40, //mbps
 
     images: {
-      cover: "/images/properties/jibhi/cover.avif",
+      cover: "/images/properties/tirthan/1.avif",
       gallery: [
-        "/images/properties/jibhi/1.avif",
-        "/images/properties/jibhi/2.avif",
-        "/images/properties/jibhi/3.webp",
-        "/images/properties/jibhi/4.webp",
-        "/images/properties/jibhi/6.webp",
-        "/images/properties/jibhi/5.webp",
+        "/images/properties/tirthan/1.avif",
+        "/images/properties/tirthan/2.jpeg",
+        "/images/properties/tirthan/3.webp",
+        "/images/properties/tirthan/4.webp",
       ],
     },
 
     seo: {
-      title: "Jibhi Sunshine Cafe | Remote Work Stay in Jibhi",
+      title: "Tirthan Sunshine Cafe | Remote Work Stay in Tirthan",
       description:
-        "Remote-work friendly stay in Jibhi with high-speed WiFi, power backup, mountain views, and long-stay discounts.",
+        "Remote-work friendly stay in tirthan valley with mountain and river views, WIFI, power backup and long stay discounts.",
     },
 
     content: {
       about:
-        "Jibhi Sunshine Cafe is a peaceful mountain stay designed for remote professionals. With reliable high-speed Wi-Fi, power backup, and serene surroundings, it’s ideal for focused work, long stays, and slow living in nature.",
+        "Tirthan Sunshine Café & Stay is a simple, comfortable place set close to the river in Tirthan Valley. We offer clean private rooms, hot water, homely food, and a quiet outdoor area where guests can sit, relax, or enjoy tea with a view of the mountains. It’s a peaceful spot for travellers who want a calm stay, good meals, and easy access to nearby viewpoints, trails, and local attractions. We provide work from hills accomodation as well. We’re always around to help with travel tips, directions, or anything you need during your visit.",
       idealFor: [
         "Remote professionals",
         "Long stays",
+        "Work from hills",
         "Solo travelers",
         "Couples",
       ],
@@ -102,15 +101,14 @@ export const properties: Property[] = [
     highlights: [
       "Quiet & nature-focused",
       "Long-stay discounts available",
-      "Designed for remote work",
+      "Designed for work from hills",
     ],
 
     policies: {
       cancellation: "Free cancellation up to 7 days before check-in",
       houseRules: [
-        "No smoking inside rooms",
-        "Quiet hours after 10 PM",
-        "No parties or events",
+        
+        "Do not throw plastic cans or garbage outside",
       ],
     },
 
@@ -119,163 +117,26 @@ export const properties: Property[] = [
         id: "short",
         label: "Short stay",
         minNights: 1,
+        pricePerDay: 1700,
+        gstPercent: 0,
+        maxGuests: 2,
+        extraGuestPrice: 1000,
+      },
+      {
+        id: "weekly",
+        label: "Weekly stay",
+        minNights: 7,
         pricePerDay: 1500,
-        gstPercent: 5,
+        gstPercent: 0,
         maxGuests: 2,
-        extraGuestPrice: 1500,
-      },
-      {
-        id: "weekly",
-        label: "Weekly stay",
-        minNights: 7,
-        pricePerDay: 1100,
-        gstPercent: 5,
-        maxGuests: 2,
-        extraGuestPrice: 300,
+        extraGuestPrice: 1000,
       },
       {
         id: "monthly",
         label: "Monthly stay",
         minNights: 31,
-        pricePerDay: 800,
-        gstPercent: 5,
-        maxGuests: 2,
-        extraGuestPrice: 200,
-      },
-    ],
-  },
-
-  {
-    slug: "the-martins-manali",
-    name: "The Martins – Manali",
-    location: "Manali",
-    roomCapacity: 2,
-
-
-    wifiSpeed: 50, //mbps
-
-
-    images: {
-      cover: "/images/properties/nagar/cover.avif",
-      gallery: [],
-    },
-
-    seo: {
-      title: "The Martins Manali | Remote Work Stay in Manali",
-      description:
-        "Comfortable remote work stay in Manali with WiFi, power backup, and long-stay discounts.",
-    },
-
-    content: {
-      about:
-        "The Martins is a comfortable and centrally located stay in Manali, suitable for professionals who want modern amenities with mountain surroundings.",
-      idealFor: ["Remote workers", "Long stays", "Workations"],
-    },
-
-    amenities: [
-      "High-speed WiFi",
-      "Power Backup",
-      "Dedicated Workspace",
-      "Heating",
-    ],
-
-    highlights: [
-      "Central Manali location",
-      "Reliable connectivity",
-      "Comfort-focused rooms",
-    ],
-
-    policies: {
-      cancellation: "Free cancellation up to 7 days before check-in",
-      houseRules: [
-        "No smoking inside rooms",
-        "No loud music after 10 PM",
-      ],
-    },
-
-    pricing: [
-      {
-        id: "short",
-        label: "Short stay",
-        minNights: 1,
-        pricePerDay: 5000,
-        gstPercent: 5,
-        maxGuests: 2,
-        extraGuestPrice: 4000,
-      },
-      {
-        id: "weekly",
-        label: "Weekly stay",
-        minNights: 7,
-        pricePerDay: 4000,
-        gstPercent: 5,
-        maxGuests: 2,
-        extraGuestPrice: 3000,
-      },
-      {
-        id: "monthly",
-        label: "Monthly stay",
-        minNights: 31,
-        pricePerDay: 3000,
-        gstPercent: 5,
-        maxGuests: 2,
-        extraGuestPrice: 2000,
-      },
-    ],
-  },
-
-  {
-    slug: "nagar-mountain-loft-xl",
-    name: "Nagar Mountain Loft XL",
-    location: "Nagar",
-    roomCapacity: 2,
-
-    wifiSpeed: 50, //mbps
-  
-
-    images: {
-      cover: "/images/properties/nagar/cover.avif",
-      gallery: [],
-    },
-
-    seo: {
-      title: "Nagar Mountain Loft XL | Long Stay in Tirthan Valley",
-      description:
-        "Spacious mountain loft with WiFi, power backup, balcony, and discounted long-term stays.",
-    },
-
-    content: {
-      about:
-        "A spacious mountain loft in Nagar, perfect for extended stays. Designed for comfort, productivity, and breathtaking valley views.",
-      idealFor: ["Couples", "Extended stays", "Small teams"],
-    },
-
-    amenities: [
-      "High-speed WiFi",
-      "Power Backup",
-      "Extra Workspace",
-      "Balcony",
-      "Mountain View",
-    ],
-
-    highlights: [
-      "Spacious layout",
-      "Best for long stays",
-      "Private balcony",
-    ],
-
-    policies: {
-      cancellation: "Free cancellation up to 7 days before check-in",
-      houseRules: ["No parties", "Quiet hours after 10 PM"],
-    },
-
-    pricing: [
-      {
-        id: "short",
-        label: "Short stay",
-        minNights: 1,
-        pricePerDay: 1900,
-        gstPercent: 5,
+        pricePerDay: 1000,
+        gstPercent: 0,
         maxGuests: 2,
         extraGuestPrice: 500,
       },
@@ -301,8 +162,8 @@ export const properties: Property[] = [
   },
 
   {
-    slug: "jibhi-tree-house",
-    name: "Jibhi Tree House",
+    slug: "jibhi-mountain-pine",
+    name: "Jibhi Mountain Pine",
     location: "Jibhi",
     roomCapacity: 2,
 
@@ -310,24 +171,33 @@ export const properties: Property[] = [
 
 
     images: {
-      cover: "/images/properties/jibhi/cover.avif",
+      cover: "/images/properties/jibhi/1.jpeg",
       gallery: [
-        "/images/properties/jibhi/1.avif",
-        "/images/properties/jibhi/2.avif",
+        "/images/properties/jibhi/1.jpeg",
+        "/images/properties/jibhi/2.jpeg",
+        "/images/properties/jibhi/3pine.jpeg",
+        "/images/properties/jibhi/4pine.jpeg",
+        "/images/properties/jibhi/5pine.jpeg",
+        "/images/properties/jibhi/6pine.jpeg",
+        "/images/properties/jibhi/7pine.jpeg",
+        "/images/properties/jibhi/8pine.jpeg",
+        "/images/properties/jibhi/9pine.jpeg",
+        "/images/properties/jibhi/10pine.jpeg",
+
       ],
     },
 
     seo: {
-      title: "Jibhi Tree House | Remote Work Stay in Jibhi",
+      title: "Jibhi Mountain Pine | Work from home Stay in Jibhi",
       description:
-        "Remote-work friendly tree house stay in Jibhi with WiFi, power backup, and mountain views.",
+        "wfh from hills friendly tree house stay in Jibhi with WiFi, power backup, and mountain views.",
     },
 
     content: {
       about:
-        "A unique tree house experience in Jibhi, blending nature, comfort, and productivity for remote professionals.",
+        "Mountain Pine Majesty — Jibhi is a peaceful forest retreat designed for travelers seeking nature, comfort, and uninterrupted remote work in the Himalayas. Nestled among tall pine trees in the serene village of Jibhi, this property offers the perfect balance of productivity and relaxation for digital nomads, remote professionals, couples, and long-stay guests. This property is specially suited for Work From Mountains stays",
       idealFor: [
-        "Remote professionals",
+        "working professionals",
         "Couples",
         "Nature lovers",
       ],
@@ -349,9 +219,7 @@ export const properties: Property[] = [
     policies: {
       cancellation: "Free cancellation up to 1 day before check-in",
       houseRules: [
-        "No smoking inside rooms",
-        "Quiet hours after 10 PM",
-        "No parties or events",
+         "Do not throw plastic cans or garbage outside",
       ],
     },
 
@@ -360,28 +228,28 @@ export const properties: Property[] = [
         id: "short",
         label: "Short stay",
         minNights: 1,
-        pricePerDay: 1600,
-        gstPercent: 5,
+        pricePerDay: 2500,
+        gstPercent: 0,
         maxGuests: 2,
-        extraGuestPrice: 1600,
+        extraGuestPrice: 1500,
       },
       {
         id: "weekly",
         label: "Weekly stay",
         minNights: 7,
-        pricePerDay: 1200,
-        gstPercent: 5,
+        pricePerDay: 2200,
+        gstPercent: 0,
         maxGuests: 2,
-        extraGuestPrice: 400,
+        extraGuestPrice: 1300,
       },
       {
         id: "monthly",
         label: "Monthly stay",
         minNights: 31,
-        pricePerDay: 900,
-        gstPercent: 5,
+        pricePerDay: 2000,
+        gstPercent: 0,
         maxGuests: 2,
-        extraGuestPrice: 300,
+        extraGuestPrice: 1,
       },
     ],
   },

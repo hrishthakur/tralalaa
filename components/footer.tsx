@@ -8,9 +8,13 @@ export default function Footer() {
           {/* BRAND */}
           <div>
             <h3 className="text-lg font-semibold text-slate-900">
-  {SITE_CONFIG.name}            </h3>
+              {SITE_CONFIG.name}
+            </h3>
             <p className="mt-3 text-sm text-slate-600 max-w-xs">
-              {SITE_CONFIG.description}
+              Purpose-built mountain stays for remote professionals.
+              Reliable work infrastructure, calm surroundings, and
+              meaningful weekend experiences — without stepping away
+              from your responsibilities.
             </p>
           </div>
 
@@ -21,9 +25,9 @@ export default function Footer() {
             </h4>
             <ul className="mt-4 space-y-2 text-sm text-slate-600">
               <li><a href="/" className="hover:text-slate-900">Home</a></li>
-              <li><a href="/locations" className="hover:text-slate-900">Locations</a></li>
-              <li><a href="/list-your-property" className="hover:text-slate-900">List your property</a></li>
-              <li><a href="/contact" className="hover:text-slate-900">Contact us</a></li>
+              <li><a href="/locations" className="hover:text-slate-900">Destinations</a></li>
+              <li><a href="/list-your-property" className="hover:text-slate-900">Partner with us</a></li>
+              <li><a href="/contact" className="hover:text-slate-900">Get in touch</a></li>
             </ul>
           </div>
 
@@ -33,16 +37,16 @@ export default function Footer() {
               Support
             </h4>
             <ul className="mt-4 space-y-2 text-sm text-slate-600">
-              <li><a href="/faq" className="hover:text-slate-900">FAQs</a></li>
-              <li><a href="/terms" className="hover:text-slate-900">Terms of service</a></li>
-              <li><a href="/privacy" className="hover:text-slate-900">Privacy policy</a></li>
+              <li><a href="/faq" className="hover:text-slate-900">Guest FAQs</a></li>
+              <li><a href="/terms" className="hover:text-slate-900">Terms & conditions</a></li>
+              <li><a href="/privacy" className="hover:text-slate-900">Privacy & data policy</a></li>
             </ul>
           </div>
 
           {/* SOCIAL */}
           <div>
             <h4 className="text-sm font-medium text-slate-900">
-              Connect with us
+              See life at Bungstays
             </h4>
 
             <div className="mt-4 flex items-center gap-4">
@@ -73,9 +77,10 @@ export default function Footer() {
         {/* BOTTOM BAR */}
         <div className="mt-14 pt-8 border-t flex flex-col md:flex-row items-center justify-between text-sm text-slate-500">
           <p>
-  ©         {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.          </p>
+            © {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.
+          </p>
           <p className="mt-4 md:mt-0">
-              {SITE_CONFIG.tagline}
+            Work normally. Live differently.
           </p>
         </div>
       </div> 
