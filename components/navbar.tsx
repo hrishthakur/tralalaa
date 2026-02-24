@@ -67,8 +67,9 @@ export default function Navbar() {
           <nav className="hidden md:flex items-center gap-8 text-sm">
             <NavLink href="/vision">Vision</NavLink>
             <NavLink href="/locations">Locations</NavLink>
-            <NavLink href="/faq">FAQs</NavLink>
-            <NavLink href="/contact">Contact</NavLink>
+            <NavLink href="/packages">Packages</NavLink>
+            <NavLink href="/blog">Blogs</NavLink>
+            <NavLink href="/contact">Contact Us</NavLink>
 
             <Link
               href="/list-your-property"
