@@ -182,7 +182,7 @@ export default function Home() {
         </div>
 
         <ul className="mt-8 space-y-4 text-sm text-muted-foreground">
-          <li>Friday arrival – Sunday departure</li>
+          <li>Friday arrival - Sunday departure</li>
           <li>Deep rest in a quiet setting</li>
           <li>Optional yoga & guided hikes</li>
           <li>Digital detox friendly</li>
