@@ -143,69 +143,113 @@ export default function Home() {
       <SectionDivider />
 
       {/* ================= EXPERIENCE OPTIONS ================= */}
-<section className="section">
+<section className="relative py-32 bg-muted/30 overflow-hidden">
+
+  {/* Ambient background depth */}
+  <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(0,0,0,0.04),transparent_50%)]" />
+
   <div className="max-w-7xl mx-auto px-6">
 
-    <p className="text-sm uppercase tracking-wide text-muted-foreground">
-      EXPERIENCE OPTIONS
-    </p>
+    {/* Header */}
+    <div className="max-w-3xl mb-20">
+      <p className="text-xs font-semibold tracking-[0.25em] text-primary uppercase">
+        Curated Mountain Experiences
+      </p>
 
-    <h2 className="mt-2 text-3xl font-semibold max-w-2xl">
-      Choose the reset that fits your life
-    </h2>
+      <h2 className="mt-6 text-5xl font-semibold tracking-tight leading-[1.1]">
+        Designed for Every Pace of Reset
+      </h2>
 
-    <div className="mt-12 grid md:grid-cols-3 gap-8">
+      <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+        Structured stays built around clarity, productivity and intentional
+        time in the mountains.
+      </p>
+    </div>
 
-      {/* 3-Day Retreat */}
-      <div>
-        <h3 className="text-xl font-semibold mb-2">
-          🌿 3-Day Weekend Retreat
-        </h3>
-        <p className="mb-4">Short break. Real relief.</p>
-        <p className="text-sm text-muted-foreground mb-4">
-          Perfect for busy professionals who cannot take long leave but need to reset.
-        </p>
-        <ul className="space-y-2 text-sm">
-          <li>• Friday evening arrival — Sunday departure</li>
-          <li>• Deep rest in nature</li>
-          <li>• Optional yoga, hikes, or cultural experiences</li>
-          <li>• Digital detox friendly</li>
+    {/* Cards */}
+    <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-4">
+
+      {/* 3-Day */}
+      <div className="group bg-background rounded-3xl p-10 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+
+        <div className="space-y-3">
+          <h3 className="text-2xl font-semibold tracking-tight">
+            3-Day Weekend Retreat
+          </h3>
+          <p className="text-primary font-medium text-sm">
+            Short break. Real reset.
+          </p>
+        </div>
+
+        <ul className="mt-8 space-y-4 text-sm text-muted-foreground">
+          <li>Friday arrival – Sunday departure</li>
+          <li>Deep rest in a quiet setting</li>
+          <li>Optional yoga & guided hikes</li>
+          <li>Digital detox friendly</li>
         </ul>
       </div>
 
-      {/* 7-Day Focus Week */}
-      <div>
-        <h3 className="text-xl font-semibold mb-2">
-          💻 7-Day Focus Week
-        </h3>
-        <p className="mb-4">Work as usual. Feel completely different.</p>
-        <p className="text-sm text-muted-foreground mb-4">
-          The ideal balance of productivity and restoration.
-        </p>
-        <ul className="space-y-2 text-sm">
-          <li>• Full workweek infrastructure</li>
-          <li>• Calm daily rhythm</li>
-          <li>• One curated weekend experience</li>
-          <li>• Most popular choice</li>
+      {/* 7-Day Highlight */}
+      <div className="relative bg-background rounded-3xl p-10 shadow-xl border border-primary/20 hover:-translate-y-1 transition-all duration-300">
+
+        <div className="absolute top-6 right-6 text-[10px] tracking-[0.2em] uppercase text-primary font-semibold">
+          Most Popular
+        </div>
+
+        <div className="space-y-3">
+          <h3 className="text-2xl font-semibold tracking-tight">
+            7-Day Focus Week
+          </h3>
+          <p className="text-primary font-medium text-sm">
+            Productive. Restorative. Balanced.
+          </p>
+        </div>
+
+        <ul className="mt-8 space-y-4 text-sm text-muted-foreground">
+          <li>High-speed work infrastructure</li>
+          <li>Calm daily rhythm</li>
+          <li>Curated weekend experience</li>
+          <li>Balanced productivity & wellness</li>
         </ul>
       </div>
 
-      {/* 14-Day Deep Reset */}
-      <div>
-        <h3 className="text-xl font-semibold mb-2">
-          🌄 14-Day Deep Reset
-        </h3>
-        <p className="mb-4">
-          For clarity, recovery, or creative breakthroughs
-        </p>
-        <p className="text-sm text-muted-foreground mb-4">
-          A slower, more immersive mountain living experience.
-        </p>
-        <ul className="space-y-2 text-sm">
-          <li>• Sustainable routine</li>
-          <li>• Multiple experiences</li>
-          <li>• Strong sense of place</li>
-          <li>• Meaningful mental reset</li>
+      {/* 14-Day */}
+      <div className="group bg-background rounded-3xl p-10 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+
+        <div className="space-y-3">
+          <h3 className="text-2xl font-semibold tracking-tight">
+            14-Day Deep Reset
+          </h3>
+          <p className="text-primary font-medium text-sm">
+            Clarity. Recovery. Breakthrough.
+          </p>
+        </div>
+
+        <ul className="mt-8 space-y-4 text-sm text-muted-foreground">
+          <li>Sustainable daily routine</li>
+          <li>Multiple curated experiences</li>
+          <li>Immersive nature setting</li>
+          <li>Meaningful mental reset</li>
+        </ul>
+      </div>
+
+      {/* Custom */}
+      <div className="bg-gradient-to-br from-primary/5 to-transparent rounded-3xl p-10 shadow-sm border border-dashed border-primary/30 hover:-translate-y-1 transition-all duration-300">
+
+        <div className="space-y-3">
+          <h3 className="text-2xl font-semibold tracking-tight">
+            Custom Experience
+          </h3>
+          <p className="text-primary font-medium text-sm">
+            Designed around you.
+          </p>
+        </div>
+
+        <ul className="mt-8 space-y-4 text-sm text-muted-foreground">
+          <li>Flexible duration</li>
+          <li>Corporate & team retreats</li>
+          <li>Personalised activities</li>
+          <li>Dedicated planning support</li>
         </ul>
       </div>
 
