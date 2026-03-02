@@ -12,7 +12,7 @@ import { SITE_CONFIG } from '@/lib/site';
 /* ================= METADATA ================= */
 
 export const metadata = {
-  title: `FAQs | ${SITE_CONFIG.name}`,
+  title: `Work From Mountains FAQs`,
   description:
     'Frequently asked questions about remote work stays, long-term bookings, Wi-Fi, workspaces, and workcation-friendly accommodation.',
 };

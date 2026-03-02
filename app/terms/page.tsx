@@ -3,7 +3,7 @@ import { SITE_CONFIG } from '@/lib/site';
 /* ================= METADATA ================= */
 
 export const metadata = {
-  title: `Terms of Service | ${SITE_CONFIG.name}`,
+  title: `Terms of Service`,
   description: `Terms and conditions for using ${SITE_CONFIG.name}, including booking requests, responsibilities, and acceptable use.`,
 };
 

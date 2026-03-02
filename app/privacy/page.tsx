@@ -1,7 +1,7 @@
 import { SITE_CONFIG } from '@/lib/site';
 
 export const metadata = {
-  title: `Privacy Policy | ${SITE_CONFIG.name}`,
+  title: `Privacy Policy`,
   description:
     `Learn how ${SITE_CONFIG.name} collects, uses, and protects your personal information.`,
 };

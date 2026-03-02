@@ -16,6 +16,12 @@ import {
 } from 'lucide-react';
 import { SITE_CONFIG } from '@/lib/site';
 
+export const metadata = {
+  title: `Work From Mountains in Himachal | ${SITE_CONFIG.name}`,
+  description:
+    "${SITE_CONFIG.name} helps professionals book peaceful, high-quality mountain stays designed specifically for remote work and long stays.",
+};
+
 export default function Home() {
   return (
     <>
@@ -32,6 +38,7 @@ export default function Home() {
           backgroundImage: "url('/images/background.png')",
         }}
       >
+
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/20" />
 
@@ -63,7 +70,7 @@ export default function Home() {
             <p className="mt-6 text-lg max-w-2xl text-white/85 font-sans">
               Structured stays in calm mountain towns for professionals who want
               productivity during the week and restoration on the weekend.
-              Choose from 3-day retreats, 7-day focus weeks, or 14-day deep resets.
+              Choose from 3-day retreats, 7-day focus weeks, or custom packages.
             </p>
             <p className="mt-4 text-sm text-white/70">
               Work normally. Live differently.
@@ -106,7 +113,7 @@ export default function Home() {
 
               <p className="mt-4 max-w-2xl">
                 These are not chaotic tourist rentals or random weekend stays.
-                Every Bungstays home is selected for livability, stability,
+                Every ${SITE_CONFIG.name} home is selected for livability, stability,
                 and a balanced daily rhythm — so you can work without friction
                 and rest without needing another vacation afterward.
               </p>

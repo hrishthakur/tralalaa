@@ -28,11 +28,6 @@ export const metadata: Metadata = {
     default: SITE_CONFIG.name,
     template: `%s | ${SITE_CONFIG.name}`,
   },
-
-  icons: {
-    icon: "/favicon.ico",
-  },
-
   description: SITE_CONFIG.description,
 
   keywords: [

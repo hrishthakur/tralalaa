@@ -6,7 +6,7 @@ import { SITE_CONFIG } from '@/lib/site';
 
 
 export const metadata = {
-  title: `Our Vision | ${SITE_CONFIG.name}`,
+  title: `Our Vision - Redefining Work From Mountains`,
   description:
     "A new standard for remote work — thoughtfully designed stays in nature without compromising performance or comfort.",
 };

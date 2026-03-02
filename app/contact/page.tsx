@@ -6,7 +6,7 @@ import { SITE_CONFIG } from '@/lib/site';
 /* ================= METADATA ================= */
 
 export const metadata = {
-  title: `Contact Us | ${SITE_CONFIG.name}`,
+  title: `Contact Us`,
   description: `Get in touch with ${SITE_CONFIG.name}. Reach us via email or phone for bookings, partnerships, or general enquiries.`,
 };
 
