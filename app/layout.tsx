@@ -29,9 +29,14 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_CONFIG.name}`,
   },
 
+  icons: {
+    icon: "/favicon.ico",
+  },
+
   description: SITE_CONFIG.description,
 
   keywords: [
+    'work from hills',
     'remote work stays',
     'bungstays',
     'work from mountains',
