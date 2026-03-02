@@ -25,5 +25,5 @@ export const SITE_CONFIG = {
     "Bungstays helps professionals book peaceful, high-quality mountain stays designed specifically for remote work and long stays.",
 
   /** Contact */
-  email: "pthakur3320@gmail.com",
+  email: "bungstays@gmail.com",
 } as const;

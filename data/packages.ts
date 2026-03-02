@@ -82,11 +82,9 @@ export const packages: PackageType[] = [
     currency: "INR",
     priceIncludesStay: true,
 
-    coverImage: "/images/packages/mountain-reset.jpg",
+    coverImage: "/images/packages/4.jpeg",
     gallery: [
-      "/images/packages/mountain-reset-1.jpg",
-      "/images/packages/mountain-reset-2.jpg",
-      "/images/packages/mountain-reset-3.jpg"
+      "/images/packages/4.jpeg"
     ],
 
     highlights: [
@@ -162,7 +160,7 @@ export const packages: PackageType[] = [
       metaTitle:
         "3 Day Mountain Reset | Work-Friendly Retreat in the Mountains | Bungstays",
       metaDescription:
-        "Experience a 3-day work-friendly mountain retreat designed for professionals. High-speed WiFi, curated hikes, stargazing, and authentic local immersion.",
+        "Experience a 3-day work friendly mountain retreat designed for professionals. High-speed WiFi, curated hikes, stargazing, and authentic local immersion.",
       keywords: [
         "work from mountains",
         "remote work retreat India",
@@ -174,112 +172,160 @@ export const packages: PackageType[] = [
   },
 
   {
-    slug: "7-day-work-explore-immersion",
+  slug: "7-day-dual-campus-work-immersion",
 
-    title: "7 Day Work & Explore Immersion",
-    tagline: "Build momentum during the week. Explore deeply on weekends.",
+  title: "7 Day Work From Mountains — Dual Campus Experience (Tirthan & Jibhi)",
+  tagline:
+    "Work remotely from the Himalayas across two premium locations — river and forest.",
 
-    shortDescription:
-      "A balanced 7-day immersion combining structured workdays with curated weekday evenings and full weekend exploration.",
+  shortDescription:
+    "A premium 7-day work-from-mountains experience in Himachal Pradesh across Tirthan Valley and Jibhi. Reliable high-speed WiFi, distraction-free workdays, guided trek, village immersion, and authentic Himalayan living.",
 
+  description:
+    "The 7 Day Work From Mountains — Dual Campus Experience is Bungstays’ flagship remote-work retreat in Himachal Pradesh, designed for professionals who want deep productivity without disconnecting from nature. Guests stay across two carefully selected properties in Tirthan Valley and Jibhi — a riverside campus and a forest campus — experiencing both environments during the week. This program combines stable high-speed internet, dedicated workspaces, structured quiet hours, and small curated groups to ensure uninterrupted professional output. Evenings and weekends introduce authentic Himalayan experiences including forest walks, cultural interaction, community dinners, and a signature guided trek to an offbeat mountain village with overnight stay and stargazing. Ideal for remote employees, startup founders, freelancers, and digital nomads seeking a meaningful workation in the Indian Himalayas.",
+
+  duration: "7-days",
+  intensity: "balanced",
+  category: "deep-immersion",
+
+  price: 25000,
+  currency: "INR",
+  priceIncludesStay: true,
+
+  coverImage: "/images/packages/3.jpeg",
+  gallery: [
+    "/images/packages/dual-campus.jpeg",
+    "/images/packages/tirthan.jpeg",
+    "/images/packages/jibhi.jpeg"
+  ],
+
+  highlights: [
+    "Work remotely from the Himalayas with reliable high-speed WiFi",
+    "Dual-location stay across Tirthan Valley and Jibhi",
+    "Small curated cohort limited to 8 professionals",
+    "Dedicated quiet work hours and distraction-free environment",
+    "Mid-week property rotation for renewed productivity",
+    "Riverside living experience in Tirthan",
+    "Forest immersion stay in Jibhi including duplex and treehouse options",
+    "Guided Himalayan trek with village homestay",
+    "Professional stargazing experience",
+    "Community dinners and authentic local cuisine",
+    "Ideal balance of work, nature, and cultural immersion"
+  ],
+
+  includes: [
+    "7 nights accommodation across two premium mountain properties",
+    "High-speed WiFi at both Tirthan and Jibhi locations",
+    "Dedicated work-friendly spaces",
+    "Power backup support",
+    "Daily breakfast and dinner",
+    "Mid-week transfer between properties",
+    "Guided trek to offbeat Himalayan village",
+    "Overnight village stay or campsite",
+    "Stargazing session under minimal light pollution skies",
+    "Community dinner experience",
+    "On-ground host coordination and support",
+    "Local orientation and activity planning"
+  ],
+
+  excludes: [
+    "Transportation to and from Tirthan Valley/Jibhi",
+    "Personal travel insurance",
+    "Lunch (flexible café or local options available)",
+    "Private transportation or sightseeing outside program",
+    "Personal trekking gear",
+    "Optional add-on experiences"
+  ],
+
+  idealFor: [
+    "Remote working professionals in tech, consulting, or corporate roles",
+    "Startup founders and entrepreneurs",
+    "Freelancers and independent consultants",
+    "Digital nomads seeking stable infrastructure in India",
+    "Creators and writers needing deep focus",
+    "Professionals experiencing burnout who cannot take long leave",
+    "Teams of 2–4 people wanting a focused workation",
+    "Urban professionals from Delhi, Bangalore, Mumbai, and Hyderabad"
+  ],
+
+  difficultyLevel: "moderate",
+
+  workFriendly: {
+    coworkingAccess: true,
+    wifiSpeed: "50–100 Mbps at both campuses",
+    powerBackup: true,
+    quietHours:
+      "Dedicated silent work hours during weekdays to ensure uninterrupted productivity"
+  },
+
+  itinerary: [
+  {
+    day: "Day 1 (Monday)",
+    title: "Arrival & Check-in — Tirthan and Jibhi",
     description:
-      "The 7 Day Work & Explore Immersion is built for professionals who want sustained productivity while experiencing authentic mountain life. Structured weekday routines ensure uninterrupted work focus, while evenings and weekends unlock curated hikes, community engagement, and immersive local experiences.",
-
-    duration: "7-days",
-    intensity: "balanced",
-    category: "deep-immersion",
-
-    price: 38999,
-    currency: "INR",
-    priceIncludesStay: true,
-
-    coverImage: "/images/packages/work-explore.jpg",
-    gallery: [
-      "/images/packages/work-explore-1.jpg",
-      "/images/packages/work-explore-2.jpg",
-      "/images/packages/work-explore-3.jpg"
-    ],
-
-    highlights: [
-      "Weekend full-day exploration",
-      "Local cultural immersion session",
-      "Evening forest walks",
-      "Networking dinner with fellow professionals",
-      "Guided fishing or camping experience"
-    ],
-
-    includes: [
-      "7 nights premium stay",
-      "High-speed WiFi",
-      "Coworking access",
-      "3 curated evening experiences",
-      "1 full weekend immersion",
-      "Community dinner",
-      "On-ground host coordination"
-    ],
-
-    excludes: [
-      "Transportation",
-      "Optional private guided sessions",
-      "Personal equipment rental"
-    ],
-
-    idealFor: [
-      "Remote teams",
-      "Startup founders",
-      "Location-independent professionals",
-      "Product builders",
-      "Consultants"
-    ],
-
-    difficultyLevel: "moderate",
-
-    workFriendly: {
-      coworkingAccess: true,
-      wifiSpeed: "100 Mbps",
-      powerBackup: true,
-      quietHours: "Dedicated silent work zones during weekdays"
-    },
-
-    itinerary: [
-      {
-        day: "Days 1–5",
-        title: "Structured Workdays",
-        description:
-          "Morning to afternoon focused work sessions. Curated evening activities including hikes, cultural immersion, and community interaction."
-      },
-      {
-        day: "Day 6",
-        title: "Weekend Deep Exploration",
-        description:
-          "Full-day guided offbeat mountain trail or fishing experience with local experts."
-      },
-      {
-        day: "Day 7",
-        title: "Slow Living & Reflection",
-        description:
-          "Relaxed morning, optional forest immersion, departure."
-      }
-    ],
-
-    safety: {
-      guidedActivities: true,
-      insuranceCovered: false,
-      medicalSupportAvailable: true
-    },
-
-    seo: {
-      metaTitle:
-        "7 Day Work & Explore Immersion | Mountain Remote Work Experience | Bungstays",
-      metaDescription:
-        "A 7-day professional work-from-mountains experience combining productivity with curated exploration and authentic local immersion.",
-      keywords: [
-        "7 day work retreat India",
-        "remote work mountains",
-        "coworking mountain stay",
-        "digital nomad India",
-        "workation India"
-      ]
-    }
+      "Guests arrive in the Tirthan Valley region and check in to their assigned accommodation — either the riverside property in Tirthan or the forest property in Jibhi. After settling in and setting up workspaces, the evening is reserved for relaxation, a gentle walk around the surroundings, and a home-style dinner to ease into the mountain rhythm."
+  },
+  {
+    day: "Day 2 (Tuesday)",
+    title: "Focused Workday in Nature",
+    description:
+      "A full productivity day supported by reliable high-speed internet and a calm environment. Guests work from their respective locations with flexible meal breaks and optional evening downtime such as riverside sitting in Tirthan or forest walks in Jibhi."
+  },
+  {
+    day: "Day 3 (Wednesday)",
+    title: "Mid-Week Location Exchange",
+    description:
+      "Guests switch properties to experience the contrasting landscapes of the region. Those staying in Tirthan move to Jibhi, while guests from Jibhi relocate to Tirthan. After a short scenic transfer, the day continues with workspace setup, exploration of the new surroundings, and relaxed evening time."
+  },
+  {
+    day: "Day 4 (Thursday)",
+    title: "Deep Work & Slow Living",
+    description:
+      "Another full workday in the new environment, offering fresh inspiration and renewed focus. Optional morning yoga or stretching session may be available. Evening is free for personal downtime, reading, or quiet nature walks."
+  },
+  {
+    day: "Day 5 (Friday)",
+    title: "Final Workday & Weekend Preparation",
+    description:
+      "Guests wrap up their professional commitments for the week. The afternoon and evening are intentionally relaxed to prepare for the upcoming mountain experience. A briefing session covers safety, packing essentials, and trek details."
+  },
+  {
+    day: "Day 6 (Saturday)",
+    title: "Mountain Trek, 360° Viewpoint & Camping",
+    description:
+      "All guests gather for a guided trek to a high-altitude viewpoint offering panoramic Himalayan views. The experience includes forest trails, scenic rest points, and an overnight camping stay or village homestay. Evening activities include bonfire, traditional dinner, storytelling, and stargazing under minimal light pollution."
+  },
+  {
+    day: "Day 7 (Sunday)",
+    title: "Return, Breakfast & Departure",
+    description:
+      "Guests descend back to the base property in the morning for breakfast and freshening up. The program concludes with departures, leaving participants with renewed clarity, meaningful connections, and a memorable Himalayan experience."
   }
+],
+
+  safety: {
+    guidedActivities: true,
+    insuranceCovered: false,
+    medicalSupportAvailable: true
+  },
+
+  seo: {
+    metaTitle:
+      "Work From Mountains — 7 Day Workation in Tirthan & Jibhi | Bungstays",
+    metaDescription:
+      "Join a 7-day work-from-mountains experience in Tirthan Valley and Jibhi with high-speed WiFi, dual-location stay, guided trek, village immersion, and authentic Himalayan living.",
+    keywords: [
+      "work from mountains India",
+      "workation Himachal Pradesh",
+      "Tirthan Valley workation",
+      "Jibhi workation",
+      "remote work retreat India",
+      "digital nomad Himalayas",
+      "coworking stay Himachal",
+      "work from mountains Himachal",
+      "remote work stay Tirthan",
+      "Himalayan workation experience"
+    ]
+  }
+}
 ];
